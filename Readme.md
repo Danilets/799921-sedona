@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Данил Цемдяйкин](https://up.htmlacademy.ru/htmlcss/21/user/799921).
-* Наставник: Евгений Алипкин. (https://up.htmlacademy.ru/htmlcss/21/user/38158)
+* Наставник: [Евгений Алипкин](https://up.htmlacademy.ru/htmlcss/21/user/38158).
 
 ---
 
