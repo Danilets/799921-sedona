@@ -14,13 +14,14 @@
 				<li class="nav-item"><a href="#">Информация</a></li>
 				<li class="nav-item"><a href="#">Фото и видео</a> </li>
 				<li class="nav-item"><a href="#">Карта штата</a> </li>
-				<li class="nav-item">Гостиница</li>
+				<li class="nav-item"><a>Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<h1 class="visually-hidden">Поиск жилья</h1>
-		<section class="filter">
+		<section class="filter-form">
+
 			<h2 class="visually-hidden">Фильтр жилья</h2>
 			<div class="options-filter">
 				<h3>Инфраструктура</h3>
@@ -40,10 +41,10 @@
 			</div>
 			<div class="cost-filter">
 				<p>Стоимость в сутки (р)</p>
-				<!--здесь будет форма-->
-				<span class="button">Показать</span>
+				<batton class="button">Показать</span>
 			</div>
 		</section>
+
 		<section class="sorting">
 			<h2 class="visually-hidden">Сортировка жилья</h2>
 			<span class="found">Найдено: 3</span>
@@ -51,69 +52,93 @@
 			<ul class="sorting-list">
 				<li class="sorting-item"><a href="#">По цене</a></li>
 				<li class="sorting-item"><a href="#">По типу</a></li>
-				<li class="sorting-item"><a href="#">По рейтингу</a></li>
-			</ul>	
+				<li class="sorting-item"><a href="#">По рейтингу</a></li>			
+				<li class="sorting-item"><a href="#" class="ascending"><img src="#" alt=""></a></li>
+				<li class="sorting-item"><a href="#" class="descending"><img src="#" alt=""></a></li>	
+			</ul>
 		</section>
 		<section class="content">
 			<h2 class="visually-hidden">Выбор жилья</h2>
 			<ul class="content-list">
 				<li class="content-item">
-					<h3 class="item-heading">Amara Resort&SPA</h3>
-					<span class="item">Гостиница</span>
-					<span class="item-price">от 4000 р.</span>
-					<p class="item-image">
-						<img src="http://placehold.it/150x100" alt="Гостиница Amara Resort&SPA">
-					</p>
-					<p class="button-content">
-						<a class="info" href="#">Подробнее</a>
-						<a class="booking" href="#">Забронировать</a> 
-					</p>
+					<div class="item-content">
+						<p class="item-image">
+							<img src="http://placehold.it/150x100" alt="Гостиница Amara Resort&SPA">
+						</p>
+						<h3 class="item-heading">Amara Resort&SPA</h3>
+						<span class="item">Гостиница</span>
+						<span class="item-price">от 4000 р.</span>
+
+						<p class="button-content">
+							<a class="info" href="#">Подробнее</a>
+							<a class="booking" href="#">Забронировать</a> 
+						</p>
+					</div>
+					<div class="item-raiting">
+						<img href="#" alt="star-img">
+						<img href="#">
+						<img href="#">
+						<img href="#">
+						<p class="raiting-text">Рейтинг: 8,5</p>
+					</div>
 				</li>
 				<li class="content-item">
-					<h3 class="item-heading">Desert Quail Inn</h3>
-					<span class="item">Мотель</span>
-					<span class="item-price">от 3000 р.</span>
-					<p class="item-image">
-						<img src="http://placehold.it/150x100" alt="Desert Quail Inn">
-					</p>
-					<p class="button-content">
-						<a class="info" href="#">Подробнее</a>
-						<a class="booking" href="#">Забронировать</a> 
-					</p>
+					<div class="item-content">
+						<p class="item-image">
+							<img src="http://placehold.it/150x100" alt="Desert Quail Inn">
+						</p>
+						<h3 class="item-heading">Desert Quail Inn</h3>
+						<span class="item">Мотель</span>
+						<span class="item-price">от 3000 р.</span>
+
+						<p class="button-content">
+							<a class="info" href="#">Подробнее</a>
+							<a class="booking" href="#">Забронировать</a> 
+						</p>
+					</div>
+					<div class="item-raiting">
+						<img href="#" alt="star-img">
+						<img href="#">
+						<img href="#">
+						<p class="raiting-text">Рейтинг: 8,9</p>
+					</div>
 				</li>
 				<li class="content-item">
-					<h3 class="item-heading">Villas At Poco Diablo</h3>
-					<span class="item">Апартаменты</span>
-					<span class="item-price">от 2000 р.</span>
-					<p class="item-image">
-						<img src="http://placehold.it/150x100" alt="Villas At Poco Diablo">
-					</p>
-					<p class="button-content">
-						<a class="info" href="#">Подробнее</a>
-						<a class="booking" href="#">Забронировать</a> 
-					</p>
+					<div class="item-content">
+						<p class="item-image">
+							<img src="http://placehold.it/150x100" alt="Villas At Poco Diablo">
+						</p>
+						<h3 class="item-heading">Villas At Poco Diablo</h3>
+						<span class="item">Апартаменты</span>
+						<span class="item-price">от 2000 р.</span>
+
+						<p class="button-content">
+							<a class="info" href="#">Подробнее</a>
+							<a class="booking" href="#">Забронировать</a> 
+						</p>
+					</div>
+					<div class="item-raiting">
+						<img href="#" alt="star-img">
+						<img href="#">
+						<p class="raiting-text">Рейтинг: 9,2</p>	
+					</div>			
 				</li>
 			</ul>
 		</section>
-		
-
 	</main>
-
 	<footer class="main-footer">
-		<p class="hashtag">
-			<a href="#">#VISITSEDONA</a>
-		</p>
-		<div class="social">
-			<ul>
-				<li><a class="social-button" href="#">Skype</a></li>
-				<li><a class="social-button" href="#">Facebook</a></li>
-				<li><a class="social-button" href="#">YouTube</a></li>
-			</ul>
-		</div>
+		<a href="#" class="hashtag">#VISITSEDONA</a>
+
+		<ul>
+			<li><a class="social-button" href="#">Skype</a></li>
+			<li><a class="social-button" href="#">Facebook</a></li>
+			<li><a class="social-button" href="#">YouTube</a></li>
+		</ul>
+
 		<div class="html-academy">
 			<span class="website-create">WEBSITE BY</span>
-			<a class="html-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="#" alt="Логотип HTML Academy">
+			<a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-logo" >
+				<img src="#" alt="">
 			</a>
 		</div>	
 	</footer>
