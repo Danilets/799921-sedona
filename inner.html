@@ -11,7 +11,7 @@
 		</a>	
 		<nav class="nav">
 			<ul class="nav-list">
-				<li class="nav-item"><a href="#">Информация</a></li>
+				<li class="nav-item"><a href="index.html">Информация</a></li>
 				<li class="nav-item"><a href="#">Фото и видео</a> </li>
 				<li class="nav-item"><a href="#">Карта штата</a> </li>
 				<li class="nav-item"><a>Гостиницы</a></li>
@@ -21,27 +21,60 @@
 	<main>
 		<h1 class="visually-hidden">Поиск жилья</h1>
 		<section class="filter-form">
-			<!--здесь будет форма-->
 			<h2 class="visually-hidden">Фильтр жилья</h2>
-			<div class="options-filter">
-				<h3>Инфраструктура</h3>
-				<ul class="options-list">
-					<li class="options-item">Бассейн</li>
-					<li class="options-item">Парковка</li>
-					<li class="options-item">wi-fi</li>
-				</ul>
-			</div>
-			<div class="housing-filter">
-				<h3>Тип жилья</h3>
-				<ul class="housing-list">
-					<li class="housing-item">Бассейн</li>
-					<li class="housing-item">Парковка</li>
-					<li class="housing-item">wi-fi</li>
-				</ul>
-			</div>
-			<div class="cost-filter">
-				<p>Стоимость в сутки (р)</p>
-				<batton class="button">Показать</span>
+			<form class="search-hotel-form" actrion="ttps://echo.htmlacademy.ru" method="get">
+				<fieldset class="search-infrastructure">
+					<legend>Инфраструктура:</legend>
+					<ul class="checkbox-list">
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-infrastructure" id="item-basin" checked>
+							<label class="visually-hidden" for="item-basin">Бассейн</label>
+						</li>
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-infrastructure" id="item-parking">
+							<label class="visually-hidden" for="item-parking">Парковка</label>
+						</li>
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-infrastructure" id="item-wifi">
+							<label class="visually-hidden" for="item-wifi">wi-fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="search-housing">
+					<legend>Тип жилья:</legend>
+					<ul class="checkbox-list">
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-housing" id="item-hotel" checked>
+							<label class="visually-hidden" for="item-hotel">Гостиница</label>
+						</li>
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-housing" id="item-motel" checked>
+							<label class="visually-hidden" for="item-motel">Мотель</label>
+						</li>
+						<li class="checkbox-item">
+							<input type="checkbox" class="visually-hidden checkbox checkbox-housing" id="item-apartments" checked>
+							<label class="visually-hidden" for="item-apartments">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="search-price">
+					<legend>Стоимость в сутки (р):</legend>
+					<ul class="search-price-list">
+						<li class="search-price-item">
+							<label class="visually-hidden" for="price-from">Стоимость от</label>
+							<input type="text" class="price-from" name="price-from" id="price-from" placeholder="ОТ 0">
+						</li>
+						<li class="search-price-item">
+							<label class="visually-hidden" for="price-before">Стоимость до</label>
+							<input type="text" class="price-before" name="price-before" id="price-before" placeholder="ДО 3000">
+						</li>
+					</ul>
+					<p>
+						<label class="visually-hidden" for="price-range">Диапазон стоимости</label>
+						<input type="range" class="price-range" id="price-range" min="0" max="3000" step="100"> 
+					</p>
+				</fieldset>
+				<button type="button" class="button button-price">Показать</button>
 			</div>
 		</section>
 
@@ -132,7 +165,7 @@
 	<footer class="main-footer">
 		<a href="#" class="hashtag">#VISITSEDONA</a>
 
-		<ul>
+		<ul class="social">
 			<li><a class="social-button" href="#">Skype</a></li>
 			<li><a class="social-button" href="#">Facebook</a></li>
 			<li><a class="social-button" href="#">YouTube</a></li>
@@ -141,7 +174,7 @@
 		<div class="html-academy">
 			<span class="website-create">WEBSITE BY</span>
 			<a href="https://htmlacademy.ru/intensive/htmlcss" class="html-academy-logo" >
-				<img src="img/logo_name.svg" alt="Логотип HTML Academy">
+				<img src="img/logo_name.svg"  width="80" height="45" alt="Логотип HTML Academy">
 			</a>
 		</div>	
 	</footer>

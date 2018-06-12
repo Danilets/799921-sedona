@@ -11,7 +11,7 @@
 		</a>	
 		<nav class="nav">
 			<ul class="nav-list">
-				<li class="nav-item"><a> Информация</a></li>
+				<li class="nav-item"><a>Информация</a></li>
 				<li class="nav-item"><a href="#">Фото и видео</a> </li>
 				<li class="nav-item"><a href="#">Карта штата</a> </li>
 				<li class="nav-item"><a href="inner.html">Гостиницы</a> </li>
@@ -101,8 +101,25 @@
 			и мы покажем вам лучшие предложения гостиниц в Седне</p>
 
 			<h2 class="search-hotel-button">Поиск гостиницы в Седоне</h2>
-			<!--здесь будет форма-->
-			<batton class="seach-button">Найти</span>
+			<form class="search-hotel-form" actrion="ttps://echo.htmlacademy.ru" method="post">
+				<p class="date-entry">
+					<label for="date-entry">Дата завезда:</label>
+					<input class="date-icon-entry" type="text" name="date-entry"  id="date-entry" placeholder="24 апреля 2017">
+				</p>
+				<p class="date-departure">
+					<label for="date-departure">Дата выезда:</label>
+					<input class="date-icon-departure" type="text" name="date-departure" id="date-departure" placeholder="4 июля 2017">
+				</p>	
+				<p class="quantity-adults">
+					<label for="quantity-adults">Взрослые:</label>
+					<input class="quantity-adults" type="number" name="quantity-adults" id="quantity-adults" value="2">
+				</p>	
+				<p class="quantity-children">
+					<label for="quantity-children">Дети:</label>
+					<input class="quantity-children" type="number" name="quantity-children" id="quantity-children" value="0">
+				</p>		
+				<button class="button seach-button" type="submit">Найти</button>
+			</form>
 		</section>
 
 		<section class="map">
@@ -123,7 +140,7 @@
 		<div class="html-academy">
 			<span class="website-create">WEBSITE BY</span>
 			<a class="html-academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/logo_name.svg" alt="Логотип HTML Academy">
+				<img src="img/logo_name.svg" width="80" height="45" alt="Логотип HTML Academy">
 			</a>
 		</div>	
 	</footer>
