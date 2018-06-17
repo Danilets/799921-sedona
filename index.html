@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 	<header>
-		<a class="logo">
-			<img src="img/index-logo.png" width="140" height="70" alt="Логотип города Sedona">
-		</a>	
 		<nav class="nav">
+			<a class="logo">
+				<img src="img/index-logo.png" width="140" height="70" alt="Логотип города Sedona">
+			</a>	
 			<ul class="nav-list">
-				<li class="nav-item"><a>Информация</a></li>
+				<li class="nav-item current-nav-item"><a href="#">Информация</a></li>
 				<li class="nav-item"><a href="#">Фото и видео</a> </li>
 				<li class="nav-item"><a href="#">Карта штата</a> </li>
 				<li class="nav-item"><a href="inner.html">Гостиницы</a> </li>
@@ -21,25 +24,26 @@
 	<main>
 		<section class="background-container">
 			<h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+			<p class="background-text"></p>
 		</section>
 		<h1 class="visually-hidden">Седона</h1>
 		
-		<p class="slogan"><b>Седона - небольшой городок в Аризоне, <br>
-		заслуживающий большего!</b>
-		</p>
-		<p class="desc">рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-
+		<section class="slogan-desc">
+			<p class="slogan">Седона - небольшой городок в Аризоне, <br>
+			заслуживающий большего!
+			</p>
+			<p class="desc">рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+		</section>
+		<h2 class="visually-hidden">Преимущества Седоны</h2>
 		<section class="reasons">
-			<h2 class="visually-hidden">Преимущества Седоны</h2>
-
 			<div class="reason-first">
 				<h3 class="heading">Настоящий городок</h3>
 				<span class="reasons-number">№1</span>
 				<p class="item-desc">Седона - не аттрациион для туристов,<br> 
 				там течёт своя жизнь</p>
 			</div>
-			<figure class="real-town">
-			</figure>
+			<p class="real-town">
+			</p>
 		</section>
 					
 		<ul class="basic-reasons-list">
@@ -70,8 +74,8 @@
 				<p class="item-desc">Да, но по нему можно пройти! Если конечно<br> 
 				вы осмелитесь</p>
 			</div>
-			<figure class="devil-bridge">
-			</figure>
+			<p class="devil-bridge">
+			</p>
 		</section>
 
 		<ul class="extra-reasons-item">	
@@ -89,18 +93,20 @@
 			</li>
 			<li class="extra-reasons-item">
 				<h3 class="heading">Мало<br>туристов</h3>
-				<span class="reasons-number">№4</span>
+				<span class="reasons-number">№5</span>
 				<p class="item-desc">Большинство едет в Гранд Каньон<br> 
 				и толпится там</p>
 			</li>
 		</ul>	
 		
 		<section class="search-form">
-			<p><b>Заинтересовались?</b></p>
+			<p class="interest"><b>Заинтересовались?</b></p>
 			<p class="desc">Укажите прелагаемые даты поездки,<br>
 			и мы покажем вам лучшие предложения гостиниц в Седне</p>
 
-			<h2 class="search-hotel-button">Поиск гостиницы в Седоне</h2>
+			<h2 class="search-hotel">
+				<button type="button" class="button search-hotel-button">Поиск гостиницы в Седоне</button>
+			</h2>
 			<form class="search-hotel-form" actrion="ttps://echo.htmlacademy.ru" method="post">
 				<p class="date-entry">
 					<label for="date-entry">Дата завезда:</label>
