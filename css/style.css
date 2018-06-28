@@ -1,5 +1,7 @@
 body {
-	margin: 0px;
+	min-width: 768px;
+	max-width: 1200px;
+	margin: 0px auto;
 	padding: 0px;
 
 	font-family: 'PT Sans', Arial, sans-serif;
@@ -9,6 +11,7 @@ body {
 	text-transform: uppercase;
 
 	background-color: #f2f2f2;
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2);
 }
 
 .inner-page {
@@ -54,13 +57,12 @@ body {
 }
 
 .background-container {
+
+
 	background-image: url("../img/background-photo.jpg");
 	background-repeat: no-repeat;
-}
 
-.background-text {
-	background-image: url("../img/Welcome.png");
-	background-repeat: no-repeat;
+
 }
 
 
@@ -191,18 +193,24 @@ body {
 	cursor: pointer;
 }
 
-.search-form .search-hotel-button {
+.search-hotel-button {
 	height: 86px;
 	width: 568px;
+
+	display: block;
+	margin: 0 auto;
 }
 
-.search-form .search-hotel {
+.search-hotel {
 	margin: 0;
+	position: relative;
 }
 
 .search-form  .search-button {
 	height: 58px;
 	width: 458px;	
+	
+	margin-top: 20px;
 }
 
 .search-hotel-button:hover {
@@ -212,6 +220,16 @@ body {
 .search-hotel-button:active {
 	color: rgba(255,255,255,0.7);
 	background-color: #503e33;
+}
+
+.search-hotel-form {
+	position: absolute;
+	top:100%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 55px 55px;
+	background: #ffffff;
+	box-sizing: border-box;
 }
 
 .search-hotel-form label {
@@ -257,26 +275,31 @@ body {
 	background-color: #5496bd;
 }
 
-.map {
-	height: 470px;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
+.map img {
+display: block;
+position: absolute;
+z-index: -1;
 }
 
 .main-footer {
+	position: relative;
+	margin-top: -120px;
 	background-color: rgba(255,255,255,0.9);
+}
+
+.inner-footer {
+	margin-top: 0;
 }
 
 .main-footer a {
 	color: #000000;
 	line-height: 26px;
 	text-decoration: none;
-	font-weight: bold;
 }
 
 .hashtag {
 	font-size: 21px;
+	font-weight: bold;
 }
 
 .main-footer ul {
@@ -291,11 +314,15 @@ body {
 	color: #000000;
 	font-size: 14px;
 	line-height: 26px;
-	font-weight: bold;
+
 }
 
 .html-academy-logo  {
+	width: 115px;
+    height: 41px;
+    margin-left: 8px;
 	color: #000000;
+
 }
 
 .html-academy-logo:hover {
@@ -348,6 +375,9 @@ body {
 	font-size: 14px;
 	line-height: 21px;
 
+	width: 133px;
+	height: 32px;
+
 	background-color: transparent;
 	border: 2px solid #ffffff;
 	border-radius: 2px;
@@ -399,6 +429,10 @@ body {
 
 .arrow-item a {
 	color: rgba(0,0,0,0.3);
+}
+
+.current-arrow-item a {
+	color: #81b3d2;	
 }
 
 .arrow-item a:hover,
@@ -512,87 +546,64 @@ input[type="checkbox"].visually-hidden {
 
 /*создание сетки*/
 
-.nav {
-	min-height: 56px;
-	width: 1200px;
-
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .nav-list {
 	margin: 0;
 	padding: 0;
 
-	min-height: 56px;
-	min-width: 1200px;
-
 	display: flex;
 	justify-content: space-between;
-
+	align-items: center;
 }
 
-.logo-block {
-	display: flex;
-	justify-content: center;
+.nav-item {
+	padding: 15px;
+	width: 20%;
+	text-align: center;
 }
 
-.logo-block a {
+.logo {
 	height: 70px;
 	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .background-container {
-	width: 1200px;
-	height: 510px;
-
-	margin-left: auto;
-	margin-right: auto;
-
-	display: flex;
+	text-align: center;
 }
 
 .background-text {
-	margin-top: 85px;
-	margin-right: auto;
-	margin-left: auto;
-	box-sizing: border-box;
-	min-height: 365px;
-	width: 460px;
+	margin:0;
+
+	background-image: url("../img/Shape-1.png");
+	background-position: bottom center;
+	background-repeat: no-repeat;	
+}
+
+.background-text img {
+	margin-top: 80px;
+	margin-bottom: 70px;
 }
 
 .slogan-desc {
-	width: 1200px;
-	
-	margin-right: auto;
-	margin-left: auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 }
 
 .slogan-desc .slogan {
 	margin: 0;
 	margin-top: 60px;
 	margin-bottom: 35px;
-
-	min-width: 768px;
 }
 
 .slogan-desc .desc {
 	margin: 0;
 	margin-bottom: 55px;
-
-	min-width: 490px;
 }
 
 
 .reasons {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-
 	display: flex;
 }
 
@@ -603,17 +614,12 @@ input[type="checkbox"].visually-hidden {
 
 .real-town {
 	margin: 0;
-	width: 66.6%;
+	width: 66.7%;
 }
 
 .basic-reasons-list {
 	padding: 0;
 	margin: 0;
-	width: 1200px;
-
-	margin-left: auto;
-	margin-right: auto;
-
 	display: flex;
 }
 
@@ -621,12 +627,9 @@ input[type="checkbox"].visually-hidden {
 	width: 33.3%;	
 }
 
-	.reasons-reverse {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-
+.reasons-reverse {
 	display: flex;
+	flex-direction: row-reverse;
 }
 
 .reason-second {
@@ -636,19 +639,15 @@ input[type="checkbox"].visually-hidden {
 .devil-bridge {
 	margin: 0;
 	width: 66.6%;
-	order: -1;
 }
 
 .extra-reasons-list {
 	padding: 0;
 	margin: 0;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
 
 	display: flex;
-
 }
+
 .extra-reasons-item {
 	width: 33.3%;	
 }
@@ -658,73 +657,200 @@ input[type="checkbox"].visually-hidden {
 	flex-direction: column;
 }
 
-.search-form h2 {
-	align-self: center;
+/* форма поиска гостиницы главной страницы */
+.search-hotel-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	width: 568px;
 }
 
-.search-form form {
-	position: absolute;
+.search-hotel-form p {
+	margin-bottom: 30px;
 }
 
-.search-form {
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
+.search-hotel-form input {
+    height: 38px;
+    padding-left: 13px;
+	box-sizing: border-box;
+}
+
+.search-hotel-form input[name="date-entry"] {
+	width: 345px;
+    margin-left: 19px;
+}
+
+.search-hotel-form input[name="date-departure"] {
+	width: 345px;
+    margin-left: 17px;
+}
+
+.search-hotel-form input[name="quantity-adults"] {
+	width: 114px;
+    margin-left: 38px;
+
+    text-align: center;
+}
+
+.search-hotel-form input[name="quantity-children"] {
+	width: 114px;
+    margin-left: 27px;
+
+    text-align: center;
 }
 
 .main-footer {
-	height: 120px;
+	padding: 35px 0;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
+.social {
+	display: flex;
+}
+
+.html-academy {
+	display: flex;
+	align-items: center;
+}
+
+
+/* сетка внутренней страницы */ 
+
+
 .filter-hotel-form {
 	height: 220px;
-	width: 1200px;
-	margin-right: auto;
-	margin-left: auto;
+	padding: 30px 70px;
 
 	display: flex;
-	justify-content: space-between;
+	box-sizing: border-box;
+}
 
+.search-infrastructure,
+.search-housing {
+	padding: 0;
+    margin: 0;
+	width: 25%;
+}
+
+.search-infrastructure ul,
+.search-housing ul {
+	padding: 0;
+    margin: 0;
+}
+
+.search-infrastructure legend,
+.search-housing legend,
+.checkbox-item {
+	margin-bottom: 25px;
 }
 
 .search-price {
+	padding: 0;
+    margin: 0;
+
+	margin-left: auto;
 	flex-direction: column;
 }
 
 .sorting {
 	height: 85px;
-	width: 1200px;
-	margin-right: auto;
-	margin-left: auto;
-
+	padding: 0 72px;
 	display: flex;
+	align-items: center;
 }
 
 .sorting .sorting-list {
+	padding: 0;
+    margin: 0;
 
 	display: flex;	
 	align-items: center;
 }
 
+.sorting h3 {
+	margin-left: 50px;
+	margin-right: 40px;
+}
 
-.content {
-	margin: 0;
-	width: 1200px;
+.sorting-item {
+	margin-left: 30px;
+}
+
+.arrow-list {
 	margin-left: auto;
-	margin-right: auto;
+	display: flex;
+}
+
+.arrow-item {
+	margin-left: 12px;
+}
+
+.content ul {
+	padding: 0;
+    margin: 0;
 }
 
 .content .content-item {
-	height: 150px;
 	margin: 0;
+	padding: 30px 72px;
 
 	display: flex;	
+	box-sizing: border-box;
 }
 
-.content-item	div:first-child {
+.content-item p {
+	padding: 0;
+    margin: 0;	
+}
+
+.item-content-housing {
+	padding: 0;
+    margin: 0;
+
+    margin-left: 30px;
+    width: 260px;
+    height: 90px;
+
 	display: flex;	
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.item-content-housing h3,
+.item-heading a  {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.content-item:nth-of-type(1) .item{
+	margin-right: 37px;
+}
+.content-item:nth-of-type(2) .item{
+	margin-right: 63px;
+}
+.content-item:nth-of-type(3) .item{
+	margin-right: 20px;
+}
+
+.button-content a {
+	padding: 3px 15px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.info {
+	margin-right: 8px;
+}
+
+.item-rating {
+	margin-left: auto;
+	text-align: right;
+	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
+
