@@ -109,10 +109,10 @@
 
 			<div class="search-hotel">
 				<button type="button" class="button search-hotel-button">Поиск гостиницы в Седоне</button>
-				<form class="search-hotel-form" actrion="ttps://echo.htmlacademy.ru" method="post">
+				<form class="search-hotel-form show-hotel-form" action="https://echo.htmlacademy.ru" method="post">
 					<p class="date-form date-entry">
 						<label for="date-entry">Дата заезда:</label>
-						<input class="date" type="text" name="date-entry"  id="date-entry" placeholder="24 апреля 2017">
+						<input class="date" type="text" name="date-entry" id="date-entry" placeholder="24 апреля 2017">
 						<button type="button" class="date-icon-entry">
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
@@ -167,13 +167,13 @@
 					<p class="quantity quantity-adults">
 						<label for="quantity-adults">Взрослые:</label>
 						<button type="button" class="adults-icon-minus"></button>
-						<input class="quantity-adults" type="text" name="quantity-adults" id="quantity-adults" placeholder="2">
+						<input class="quantity-adults" type="text" name="quantity-adults" id="quantity-adults" value="0">
 						<button type="button" class="adults-icon-plus"></button>
 					</p>	
 					<p class="quantity quantity-children">
 						<label for="quantity-children">Дети:</label>
 						<button type="button" class="children-icon-minus"></button> 
-						<input class="quantity-children" type="text" name="quantity-children" id="quantity-children" placeholder="0">
+						<input class="quantity-children" type="text" name="quantity-children" id="quantity-children" value="0">
 						<button type="button" class="children-icon-plus"></button>
 					</p>		
 					<button class="button search-button" type="submit">Найти</button>
@@ -182,9 +182,10 @@
 			
 		</section>
 
-		<section class="map">
-			<img src="img/map.png" width="1200" height="593" alt="Карта расположения Седоны">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1529962386466" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<section class="map-conteiner" id="map">
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBePW7tHRfUtgA9DNSkeDsexVgzyolPmsI&callback=mapmap"></script>
+		<!--<img src="img/map.png" width="1200" height="593" alt="Карта расположения Седоны"> <!--
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d838162.8410384329!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1529962386466" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 		</section>
 	</main>
 
@@ -226,5 +227,6 @@
 			</a>
 		</div>	
 	</footer>
+	<script async defer src="js/script.js"></script>
   </body>
 </html>

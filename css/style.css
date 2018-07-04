@@ -194,7 +194,7 @@ body {
 .search-hotel-button {
 	height: 86px;
 	width: 568px;
-
+	font-weight: bold;
 	display: block;
 	margin: 0 auto;
 }
@@ -207,7 +207,7 @@ body {
 .search-form  .search-button {
 	height: 58px;
 	width: 458px;	
-	
+	font-weight: bold;
 	margin-top: 23px;
 }
 
@@ -224,7 +224,7 @@ body {
 	position: absolute;
 	top:100%;
 	left: 50%;
-	transform: translateX(-50%);
+	margin-left: -284px;
 	padding: 55px 55px;
 	background: #ffffff;
 	box-sizing: border-box;
@@ -280,8 +280,12 @@ body {
 .map img {
 display: block;
 position: absolute;
-z-index: -1;
 }
+
+.map-conteiner{
+	height: 593px;
+}
+
 
 .main-footer {
 	position: relative;
@@ -718,6 +722,13 @@ input[type="checkbox"].visually-hidden {
 	margin-right: 20%;
 }
 
+.nav-item:nth-of-type(3) a {
+	margin-left: 5px;
+}
+
+.nav-item:last-child a {
+	margin-left: 15px;
+}
 
 .logo {
 	height: 70px;
@@ -821,8 +832,35 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
+	z-index: 1;
 	width: 568px;
+	animation: bounce 0.6s;
+}
+.search-hotel-form.show-hotel-form {
+	display: none;
+
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0.1;
+    transform: translateY(-100px);
+  }
+
+  70% {
+    opacity: 0.7;
+    transform: translateY(10px);
+  }
+
+  90% {
+    opacity: 0.9;
+    transform: translateY(-10px); 
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .search-hotel-form p {
@@ -979,8 +1017,6 @@ input[type="checkbox"].visually-hidden {
 	background-color: #81b3d2;
 }
 
-
-
 .adults-icon-plus::before,
 .children-icon-plus::before {
 	content: "";
@@ -1030,12 +1066,7 @@ input[type="checkbox"].visually-hidden {
 	background-color: #81b3d2;
 }
 
-
-
-
-
 /* сетка внутренней страницы */ 
-
 
 .filter-hotel-form {
 	height: 217px;
@@ -1241,5 +1272,4 @@ input[type="checkbox"]:disabled:checked+label::before {
 	padding: 0;
 	vertical-align: middle;
 	margin-right: 15px;
-	
 }
