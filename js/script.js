@@ -21,29 +21,29 @@ var storageChildren = "";
 try {
 	storageAdults = localStorage.getItem("Adults");
 	storageChildren = localStorage.getItem("Children");
-	} catch (err) {
+} catch (err) {
 	isStorageSupport = false;
-	}
+}
 
 //обработка счётчика количества взрослых и детей
 plusAdults.addEventListener("click", function() {
-	outputAdults.value = parseInt(outputAdults.value)+1;
+	outputAdults.value = parseInt(outputAdults.value) + 1;
 });
 
 minusAdults.addEventListener("click", function() {
-	if (outputAdults.value>0) {
-	outputAdults.value = parseInt(outputAdults.value)-1;
+	if (outputAdults.value > 0) {
+		outputAdults.value = parseInt(outputAdults.value) - 1;
 	}	
 });
 
 plusChildren.addEventListener("click", function() {
-	outputChildren.value = parseInt(outputChildren.value)+1;
+	outputChildren.value = parseInt(outputChildren.value) + 1;
 });
 
 
 minusChildren.addEventListener("click", function() {
-	if (outputChildren.value>0) {
-		outputChildren.value = parseInt(outputChildren.value)-1;
+	if (outputChildren.value > 0) {
+		outputChildren.value = parseInt(outputChildren.value) - 1;
 	}
 });
 
@@ -51,17 +51,18 @@ minusChildren.addEventListener("click", function() {
 function mapmap () {
 	var Sedona = {lat: 34.8697400, lng: -111.7609900};
 	map = new google.maps.Map(document.getElementById('map'), {
-	center: Sedona,
-	zoom: 9,
-	disableDefaultUI: true,
-	zoomControl: true,
-	zoomControlOptions: {position: google.maps.ControlPosition.LEFT_TOP},
-	fullscreenControl: true
+		center: Sedona,
+		zoom: 9,
+		disableDefaultUI: true,
+		zoomControl: true,
+		zoomControlOptions: {position: google.maps.ControlPosition.LEFT_TOP},
+		fullscreenControl: true
 	});
 
 	var marker = new google.maps.Marker({
-	position: Sedona,
-	map: map});
+		position: Sedona,
+		map: map
+	});
 }
 
 //обработка события вызова формы Поиска гостиницы в Седоне
@@ -72,7 +73,7 @@ btnAppearance.addEventListener("click", function(evt) {
 		dateFocus.focus();
 	}
 
-	if (storageAdults&&storageChildren) {
+	if (storageAdults && storageChildren) {
 		outputAdults.value = storageAdults;
 		outputChildren.value = storageChildren;
 	}
@@ -80,18 +81,18 @@ btnAppearance.addEventListener("click", function(evt) {
 
 //запись значений счётчиков количества взрослых и детей в localStorage 
 popup.addEventListener("submit", function(evt) {
-	if (!dateEntry.value||!dateDeparture.value) {
+	if (!dateEntry.value || !dateDeparture.value) {
 		evt.preventDefault();
 		console.log("Необходимо ввести даты.");
 	}
 
-	if (!outputAdults.value||!outputChildren.value) {
+	if (!outputAdults.value || !outputChildren.value) {
 		evt.preventDefault();
 		console.log("Необходимо задать количество детей и взрослых.");
 	} else {
 		if (isStorageSupport) {
-		storageAdults = localStorage.setItem("Adults", outputAdults.value);
-		storageChildren = localStorage.setItem("Children", outputChildren.value)
+			storageAdults = localStorage.setItem("Adults", outputAdults.value);
+			storageChildren = localStorage.setItem("Children", outputChildren.value)
 		}
 	}
 });
