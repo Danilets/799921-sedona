@@ -209,7 +209,7 @@ body {
 	position: relative;
 }
 
-.search-form  .search-button {
+.search-form .search-button {
 	height: 58px;
 	width: 458px;	
 	font-weight: bold;
@@ -311,8 +311,8 @@ body {
 .footer-element {
 	width: 33.3%;
 	-webkit-box-pack: center;	
-		-ms-flex-pack: center;	
-	justify-content: center;
+	   -ms-flex-pack: center;	
+	 justify-content: center;
 	-webkit-box-align: center;
 	   -ms-flex-align: center;
 	      align-items: center;
@@ -329,6 +329,8 @@ body {
 }
 
 .hashtag {
+	padding: 0;
+	margin:0;
 	text-align: center;
 
 	font-size: 21px;
@@ -352,8 +354,8 @@ body {
 	   -ms-flex-align: center;
 	      align-items: center;
 	-webkit-box-pack: center;	
-		-ms-flex-pack: center;	
-	justify-content: center;
+	   -ms-flex-pack: center;	
+	 justify-content: center;
   	width: 46px;
   	height: 48px;
 
@@ -852,8 +854,8 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	-webkit-box-orient: horizontal;	
 	-webkit-box-direction: reverse;	
-		-ms-flex-direction: row-reverse;	
-			flex-direction: row-reverse;
+	   -ms-flex-direction: row-reverse;	
+		   flex-direction: row-reverse;
 }
 
 .reason-second {
@@ -885,8 +887,8 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	-webkit-box-orient: vertical;	
 	-webkit-box-direction: normal;	
-		-ms-flex-direction: column;	
-			flex-direction: column;
+	   -ms-flex-direction: column;	
+		   flex-direction: column;
 }
 
 .search-hotel-form {
@@ -897,8 +899,8 @@ input[type="checkbox"].visually-hidden {
 		flex-wrap: wrap;
 
 	-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-	justify-content: space-between;
+	   -ms-flex-pack: justify;
+	 justify-content: space-between;
 	z-index: 1;
 	width: 568px;
 	-webkit-animation: bounce 0.6s;
@@ -1222,8 +1224,8 @@ input[type="checkbox"].visually-hidden {
 	margin-left: auto;
 	-webkit-box-orient: vertical;	
 	-webkit-box-direction: normal;	
-		-ms-flex-direction: column;	
-			flex-direction: column;
+	   -ms-flex-direction: column;	
+		   flex-direction: column;
 }
 
 .sorting {
@@ -1319,12 +1321,12 @@ input[type="checkbox"].visually-hidden {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-			flex-direction: column;
+	   -ms-flex-direction: column;
+	   	   flex-direction: column;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	-ms-flex-line-pack: justify;
-	    align-content: space-between;
+	     align-content: space-between;
 }
 
 .housing-desc {
@@ -1332,7 +1334,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .item-content-housing h3,
-.item-heading a  {
+.item-heading a {
 	padding: 0;
 	margin: 0;
 	margin-top: -5px;
@@ -1371,8 +1373,8 @@ input[type="checkbox"].visually-hidden {
 		-ms-flex-direction: column;
 			flex-direction: column;
 	-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-	  justify-content: space-between;
+	   -ms-flex-pack: justify;
+	 justify-content: space-between;
 }
 
 input[type="checkbox"]+label::before {
@@ -1381,8 +1383,8 @@ input[type="checkbox"]+label::before {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 23px 23px;
-	width: 23px;
-	height: 23px;;
+	width: 27px;
+	height: 27px;;
 	display: inline-block;
 	padding: 0;
 	vertical-align: middle;
@@ -1431,3 +1433,6 @@ input[type="checkbox"]:disabled:checked+label::before {
 	margin-right: 15px;
 }
 
+.checkbox:focus+label {
+	outline: 2px solid #81b3d2;
+}
