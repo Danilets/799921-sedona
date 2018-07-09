@@ -121,6 +121,7 @@ body {
 	background-image: url("../img/background-2.jpg");
 	background-position: top right;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .devil-bridge {
@@ -129,6 +130,7 @@ body {
 	background-image: url("../img/background-3.jpg");
 	background-position: top left;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .basic-reasons-list {
@@ -194,14 +196,17 @@ body {
 	text-transform: uppercase;
 	border: none;
 	cursor: pointer;
+
 }
 
 .search-hotel-button {
-	height: 86px;
 	width: 568px;
+	padding: 30px 0;
 	font-weight: bold;
 	display: block;
 	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
 }
 
 .search-hotel {
@@ -346,6 +351,9 @@ body {
 }
 
 .social-button {
+	color: #ffffff;
+  	background-color: #81b3d2;
+
 	display: -webkit-box; 
   	display: -ms-flexbox;  
   	display: -webkit-flex; 
@@ -358,9 +366,7 @@ body {
 	 justify-content: center;
   	width: 46px;
   	height: 48px;
-
-	color: #ffffff;
-  	background-color: #81b3d2;
+	margin: 3px 3px;
 }
 
 .social-button:hover,
@@ -403,7 +409,6 @@ body {
 }
 
 .social {
-	flex-basis: 150px;
 	display: -webkit-box; 
   	display: -ms-flexbox;  
   	display: -webkit-flex; 
@@ -412,7 +417,7 @@ body {
 		flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	   -ms-flex-pack: justify;
-	 justify-content: space-between;
+	 justify-content: center;
 	margin: 0;
   	padding: 0;
 }
@@ -791,7 +796,7 @@ input[type="checkbox"].visually-hidden {
 .background-text {
 	margin:0;
 	
-	background-image: url("../img/Shape-1.png");
+	background-image: url("../img/shape-1.png");
 	background-position: bottom center;
 	background-repeat: no-repeat;	
 }
@@ -1188,15 +1193,30 @@ input[type="checkbox"].visually-hidden {
 	box-sizing: border-box;
 }
 
-.search-infrastructure,
-.search-housing {
+.filter-hotel-form	fieldset:not(.search-price) {
 	padding: 0;
     margin: 0;
 	width: 24%;
 }
 
-.search-infrastructure ul,
-.search-housing ul {
+.search-infrastructure .checkbox-list,
+.search-housing .checkbox-list {	
+	display: -webkit-box;	
+	display: -ms-flexbox;	
+	display: flex;
+	-webkit-box-orient: vertical;	
+	-webkit-box-direction: normal;	
+	   -ms-flex-direction: column;	
+		   flex-direction: column;
+	-ms-flex-wrap: wrap;	
+	flex-wrap: wrap;
+
+	padding: 0;
+    margin: 0;
+	max-height: 140px;
+}
+
+.searche-checkbox ul {
 	padding: 0;
     margin: 0;
 }
@@ -1288,7 +1308,7 @@ input[type="checkbox"].visually-hidden {
 	box-sizing: border-box;
 }
 
-.item-image img {
+.image-conteiner img {
 	display: block;
 }
 
@@ -1315,7 +1335,7 @@ input[type="checkbox"].visually-hidden {
 
     margin-left: 30px;
     min-height: 90px;
-
+	width: 66.6%;
 	display: -webkit-box;	
 	display: -ms-flexbox;	
 	display: flex;
